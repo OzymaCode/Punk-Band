@@ -1,0 +1,369 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.842);
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+i {
+  font-size: medium;
+  color: rgba(255, 255, 255, 0.514);
+}
+
+body {
+  background: linear-gradient(black, rgba(0, 0, 0, 0.904));
+}
+body header {
+  background: rgb(29, 29, 29);
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  height: auto;
+  width: 100%;
+}
+body header * {
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+body header ul {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+body header ul li a {
+  padding: 2rem;
+}
+body header ul.more {
+  display: none;
+}
+body header ul.more.active {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  background: rgb(29, 29, 29);
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  padding-top: 0.5rem;
+}
+body header ul.more.active * {
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+body header ul.more.active * {
+  padding: 0.5rem;
+}
+body header .bx-menu {
+  display: none;
+}
+body .home {
+  background: rgb(29, 29, 29);
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  background: url("../img/band1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+body .home * {
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+body .home h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+body .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: rgb(245, 245, 245);
+  color: rgb(29, 29, 29);
+  text-shadow: none;
+}
+body .about * {
+  color: rgb(29, 29, 29);
+  text-shadow: none;
+}
+body .about p {
+  width: 50%;
+  padding: 2rem;
+}
+body .tours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(29, 29, 29);
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+body .tours * {
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+body .tours .head * {
+  padding: 0.2rem;
+}
+body .tours .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+body .tours .content ul {
+  width: 100%;
+  list-style: none;
+  padding: 2rem 0;
+}
+body .tours .content ul li {
+  background: rgb(245, 245, 245);
+  color: rgb(29, 29, 29);
+  text-shadow: none;
+  padding: 0.8rem 0.8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.336);
+  font-weight: 600;
+  text-shadow: none;
+}
+body .tours .content ul li * {
+  color: rgb(29, 29, 29);
+  text-shadow: none;
+}
+body .tours .content .locations {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+}
+body .tours .content .locations div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(245, 245, 245);
+  color: rgb(29, 29, 29);
+  text-shadow: none;
+}
+body .tours .content .locations div * {
+  color: rgb(29, 29, 29);
+  text-shadow: none;
+}
+body .tours .content .locations div .img1 {
+  background: url("../img/ny2.jpg");
+  height: 20vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .tours .content .locations div .img2 {
+  background: url("../img/la2.jpg");
+  height: 20vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .tours .content .locations div .img3 {
+  background: url("../img/at2.jpg");
+  height: 20vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .tours .content .locations div .content {
+  padding: 1rem;
+  width: 100%;
+}
+body .tours .content .locations div .content * {
+  font-size: medium;
+  align-self: flex-start;
+  padding-bottom: 0.5rem;
+}
+body .tours .content .locations div .content i {
+  font-weight: 500;
+}
+body .tours .content .locations div .content button {
+  background: rgb(29, 29, 29);
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  padding: 0.6rem;
+  border: none;
+}
+body .tours .content .locations div .content button * {
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+body .contact {
+  background: rgb(245, 245, 245);
+  color: rgb(29, 29, 29);
+  text-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .contact * {
+  color: rgb(29, 29, 29);
+  text-shadow: none;
+}
+body .contact * {
+  padding: 0.2rem;
+}
+body .contact .head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .contact .content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+body .contact .content .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .contact .content .content .details * {
+  font-weight: semi-bold;
+  font-size: large;
+}
+body .contact .content .content .messanger form {
+  display: grid;
+  grid-template-areas: "name email" "message message" ".... submit";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+body .contact .content .content .messanger form .name {
+  grid-area: name;
+}
+body .contact .content .content .messanger form .email {
+  grid-area: email;
+}
+body .contact .content .content .messanger form .message {
+  grid-area: message;
+}
+body .contact .content .content .messanger form .submit {
+  grid-area: submit;
+  background: rgb(29, 29, 29);
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+body .contact .content .content .messanger form .submit * {
+  color: rgba(255, 255, 255, 0.842);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+body .contact .content .content .messanger form input {
+  background: rgba(0, 0, 0, 0);
+}
+body .contact .content .content .messanger form * {
+  border: 1px solid rgb(29, 29, 29);
+  padding: 0.8rem;
+}
+body .image1 {
+  height: 100%;
+  width: 100%;
+  background: url("../img/band2.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+body footer .social i {
+  font-size: 30px;
+}
+body footer .social i:hover {
+  color: rgba(255, 255, 255, 0.733);
+}
+
+@media (max-width: 1450px) {
+  body .about p {
+    width: 100%;
+    max-width: 650px;
+  }
+  body .tours .content {
+    width: 100%;
+    max-width: 650px;
+  }
+  body .contact .content {
+    width: 100%;
+    max-width: 650px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 640px) {
+  body .contact .content .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body header ul {
+    display: none;
+  }
+  body header .bx-menu {
+    display: initial;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body header ul.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body header ul.active * {
+    padding: 5px;
+  }
+  body header ul.active #more {
+    display: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body header ul.active #moreBtn {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,327 @@
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.842); 
+    list-style: none;
+    scroll-behavior: smooth; 
+}
+
+$textShadow : 0px 4px 3px rgba(0,0,0,0.4),
+0px 8px 13px rgba(0,0,0,0.1),
+0px 18px 23px rgba(0,0,0,0.1);
+
+@mixin flexCenter() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bgBlack() {
+    background: rgb(29, 29, 29);
+    color: rgba(255, 255, 255, 0.842);
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1); 
+    * { 
+        color: rgba(255, 255, 255, 0.842);
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+        0px 8px 13px rgba(0,0,0,0.1),
+        0px 18px 23px rgba(0,0,0,0.1); 
+    }
+}
+
+@mixin bgWhite() {
+    background: rgb(245, 245, 245);
+    color: rgb(29, 29, 29);
+    text-shadow: none;
+    * { 
+        color: rgb(29, 29, 29);
+        text-shadow: none;
+    }
+    // text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    // 0px 8px 13px rgba(0,0,0,0.1),
+    // 0px 18px 23px rgba(0,0,0,0.1)
+    
+    // color: rgba(255, 255, 255, 0.842);;
+}
+i {
+    font-size: medium;
+    color:rgba(255, 255, 255, 0.514);
+}
+@mixin img($pic) {
+    background: url('../img/' + $pic + ".jpg");
+    height: 20vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+}
+
+
+
+body {  
+    background: linear-gradient(black, rgba(0, 0, 0, 0.904));
+    header {
+        @include bgBlack(); 
+        position: fixed;
+        height: auto;
+        width: 100%; 
+        ul {
+            display: flex;
+            flex-direction: row;  
+            padding: 5px;
+            text-transform: uppercase;
+            font-weight: 400;  
+            li a { 
+                padding: 2rem; 
+            }
+        }
+        ul.more { 
+            display: none;
+        }
+        ul.more.active { 
+            position: absolute;
+            @include flexCenter();
+            align-items: flex-start;
+            @include bgBlack();
+            padding-top: .5rem;
+            * {
+                padding: .5rem;
+            }
+        }
+        .bx-menu {
+            display: none;
+        }
+
+    }
+
+    .home { 
+        @include bgBlack(); 
+        background: url('../img/band1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;  
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        @include flexCenter();
+        justify-content: flex-end; 
+        h1 { 
+            @include flexCenter();
+            justify-content: flex-end; 
+            font-size: 3rem;
+            padding-bottom: 2rem;  
+        }
+    }
+
+    .about {
+        @include flexCenter();
+        padding: 2rem; 
+        @include bgWhite(); 
+        p { 
+            width: 50%;
+            padding: 2rem;
+        } 
+    }
+
+    .tours {
+        @include flexCenter();
+        @include bgBlack(); 
+        padding: 2rem;
+        .head {
+             * { padding: .2rem; }
+        }
+        .content {
+            @include flexCenter(); 
+            width: 50%;  
+            ul {
+                width: 100%;
+                list-style: none;
+                padding: 2rem 0; 
+                li {
+                    @include bgWhite();  
+                    padding: .8rem .8rem;
+                    border-top: 1px solid rgba(0, 0, 0, 0.336);
+                    font-weight: 600;
+                    text-shadow: none;
+                }
+            }
+            .locations {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1.2rem;
+                div {
+                    @include flexCenter();  
+                    @include bgWhite();   
+                    .img1 { 
+                        @include img('ny2');
+                    }
+                    .img2 { 
+                        @include img('la2');
+                    }
+                    .img3 { 
+                        @include img('at2');
+                    } 
+                    .content {
+                        padding: 1rem;
+                        width: 100%;
+                        * {
+                            font-size: medium;
+                            align-self: flex-start;
+                            padding-bottom: .5rem;
+                        }
+                        i {
+                            font-weight: 500;
+                        }
+                        button {
+                            @include bgBlack(); 
+                            padding: .6rem;
+                            border: none;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .contact {
+        @include bgWhite();
+        @include flexCenter();
+        * { padding: .2rem; }
+        .head { 
+            @include flexCenter(); 
+        }
+        .content {
+            padding: 2rem;
+            @include flexCenter();
+            width: 50%; 
+            .content {
+                width: 100%; 
+                display: grid;
+                grid-template-columns: 1fr 1fr;  
+                
+                .details {
+                    * {
+                        font-weight: semi-bold;
+                        font-size: large;
+                    }
+                }
+
+                .messanger form { 
+                    display: grid;
+                    grid-template-areas:   "name email"
+                        "message message"
+                        ".... submit";
+                    grid-template-rows: 1fr 1fr 1fr;
+                    grid-template-columns: 1fr 1fr;
+                    gap: .4rem;
+                    .name {
+                        grid-area: name;
+                    }
+                    .email {
+                        grid-area: email;
+                    }
+                    .message {
+                        grid-area: message;
+                    }
+                    .submit {
+                        grid-area: submit;
+                        @include bgBlack();
+                        cursor: pointer;
+                    }
+                    input {
+                        background:rgba(0, 0, 0, 0);
+
+                    }
+                    * {
+                        border: 1px solid rgb(29, 29, 29);
+                        padding: .8rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .image1 {
+        height: 100%;
+        width: 100%;
+        background: url('../img/band2.jpg');
+        background-repeat: none;
+        background-position: center;
+        background-size: cover;
+    }
+
+    footer {
+        @include flexCenter();
+        height: 20rem;
+        .social i {
+            font-size: 30px;
+            &:hover {
+                color:rgba(255, 255, 255, 0.733);
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1450px) {
+    body {
+        .about p {
+            width: 100%;
+            max-width: 650px;
+        }
+        .tours .content {
+            width: 100%;
+            max-width: 650px; 
+        }
+        .contact .content {
+            width: 100%;
+            max-width: 650px; 
+            padding-left: 0; 
+            padding-right: 0; 
+        }
+    }
+}
+@media (max-width: 640px) {
+    body {
+        .contact .content .content {
+            @include flexCenter(); 
+        }
+        header {
+            ul {
+                display: none;
+
+            }
+            .bx-menu {
+                display: initial;
+                font-size: 4rem;
+                @include flexCenter();
+            }
+            ul.active { 
+                @include flexCenter();
+                * {
+                    padding: 5px;
+                }
+                #more {
+                    display: initial;
+                    @include flexCenter();
+                }
+                #moreBtn {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
